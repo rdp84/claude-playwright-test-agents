@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node24/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@fixtures/*": ["./fixtures/*"],
+      "@model/*": ["./model/*"]
+    }
+  },
+  "include": ["**/*.ts"]
+}
