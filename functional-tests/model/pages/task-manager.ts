@@ -49,7 +49,7 @@ export class TaskManagerPage extends BasePage {
   }
 
   taskCheckbox(title: string): Locator {
-    return this.taskItem(title).locator('[data-testid^="task-ckbx-"]')
+    return this.taskItem(title).locator('[data-testid^="task-checkbox-"]')
   }
 
   taskDeleteButton(title: string): Locator {
