@@ -5,7 +5,8 @@
       "args": [
         "playwright",
         "run-test-mcp-server"
-      ]
+      ],
+      "cwd": "/home/bobby/Computing/Claude/web-app/functional-tests"
     }
   }
 }
