@@ -173,7 +173,7 @@ function TaskItem({ task, onToggle, onDelete }) {
         onClick={onToggle}
         aria-label={task.completed ? 'Mark incomplete' : 'Mark complete'}
         aria-pressed={task.completed}
-        data-testid={`task-checkbox-${task.id}`}
+        data-testid={`task-ckbx-${task.id}`}
       >
         {task.completed && '✓'}
       </button>
