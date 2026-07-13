@@ -1,12 +1,12 @@
 {
   "mcpServers": {
     "playwright-test": {
-      "command": "npx",
+      "command": "./functional-tests/node_modules/.bin/playwright",
       "args": [
-        "playwright",
-        "run-test-mcp-server"
-      ],
-      "cwd": "/home/bobby/Computing/Claude/web-app/functional-tests"
+        "run-test-mcp-server",
+        "--config",
+        "functional-tests/playwright.config.ts"
+      ]
     }
   }
 }
