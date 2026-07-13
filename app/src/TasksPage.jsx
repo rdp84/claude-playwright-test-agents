@@ -184,7 +184,7 @@ function TaskItem({ task, onToggle, onDelete }) {
           <span className={`priority-badge priority-${task.priority}`} data-testid={`task-priority-${task.id}`}>
             {task.priority}
           </span>
-          <span className="task-date">
+          <span className="task-date" data-testid={`task-date-${task.id}`}>
             {new Date(task.createdAt).toLocaleDateString()}
           </span>
         </div>

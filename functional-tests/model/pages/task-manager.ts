@@ -55,4 +55,18 @@ export class TaskManagerPage extends BasePage {
   taskDeleteButton(title: string): Locator {
     return this.taskItem(title).locator('[data-testid^="task-delete-"]')
   }
+
+  taskPriority(title: string): Locator {
+    return this.taskItem(title).locator('[data-testid^="task-priority-"]')
+  }
+
+  taskDate(title: string): Locator {
+    return this.taskItem(title).locator('[data-testid^="task-date-"]')
+  }
+
+  async addTask(title: string, priority?: string) {
+    await this.taskInput.fill(title)
+    if (priority) await this.prioritySelect.selectOption(priority)
+    await this.addTaskButton.click()
+  }
 }
