@@ -33,6 +33,13 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
         working-directory: ./functional-tests
+    - parallel:
+      - name: Lint app/
+        run: npm run lint
+        working-directory: ./app
+      - name: Test app/
+        run: npm test
+        working-directory: ./app
     - name: Run Playwright tests
       run: npm test
       working-directory: ./functional-tests

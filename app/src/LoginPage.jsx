@@ -1,9 +1,5 @@
 import { useState } from 'react'
-
-const USERS = {
-  'alice@example.com': 'password123',
-  'bob@example.com': 'hunter2',
-}
+import { validateLoginInput, authenticate } from './authUtils'
 
 export default function LoginPage({ onLogin }) {
   const [email, setEmail] = useState('')
@@ -14,11 +10,12 @@ export default function LoginPage({ onLogin }) {
     e.preventDefault()
     setError('')
 
-    if (!email) { setError('Email is required'); return }
-    if (!password) { setError('Password is required'); return }
+    const validationError = validateLoginInput(email, password)
+    if (validationError) { setError(validationError); return }
 
-    if (USERS[email] === password) {
-      onLogin({ email, name: email.split('@')[0] })
+    const user = authenticate(email, password)
+    if (user) {
+      onLogin(user)
     } else {
       setError('Invalid email or password')
     }
