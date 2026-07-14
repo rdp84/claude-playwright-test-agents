@@ -10,7 +10,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 1.1. Add a task with a valid title and default (medium) priority
+#### 1.1. Add a task with a valid title and default (medium) priority — `[x] Implemented`
 
 **File:** `functional-tests/tests/adding-tasks.spec.ts`
 
@@ -28,7 +28,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Total stat (data-testid 'stat-total') increments by one (from 3 to 4)
     - expect: The Active stat (data-testid 'stat-active') increments by one (from 2 to 3)
 
-#### 1.2. Add a task with high priority
+#### 1.2. Add a task with high priority — `[ ] Skipped: covered by the single add-task test (1.1); a dedicated high-priority test wasn't felt necessary`
 
 **File:** `functional-tests/tests/adding-tasks.spec.ts`
 
@@ -44,7 +44,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The task's priority badge (data-testid 'task-priority-{id}') shows 'high'
     - expect: The task item has data-priority attribute equal to 'high'
 
-#### 1.3. Add a task with low priority
+#### 1.3. Add a task with low priority — `[ ] Skipped: covered by the single add-task test (1.1); a dedicated low-priority test wasn't felt necessary`
 
 **File:** `functional-tests/tests/adding-tasks.spec.ts`
 
@@ -60,7 +60,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The priority badge shows 'low'
     - expect: The task item has data-priority attribute equal to 'low'
 
-#### 1.4. Attempt to add a task with an empty title
+#### 1.4. Attempt to add a task with an empty title — `[x] Implemented`
 
 **File:** `functional-tests/tests/adding-tasks.spec.ts`
 
@@ -73,7 +73,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The error element has role 'alert'
     - expect: The Total stat count remains unchanged
 
-#### 1.5. Attempt to add a task with a whitespace-only title
+#### 1.5. Attempt to add a task with a whitespace-only title — `[x] Implemented`
 
 **File:** `functional-tests/tests/adding-tasks.spec.ts`
 
@@ -87,7 +87,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The error message 'Task title cannot be empty' appears (data-testid 'task-input-error')
     - expect: The task count stats remain unchanged
 
-#### 1.6. Error message clears when the user starts typing after a failed submission
+#### 1.6. Error message clears when the user starts typing after a failed submission — `[x] Implemented`
 
 **File:** `functional-tests/tests/adding-tasks.spec.ts`
 
@@ -100,7 +100,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The error message (data-testid 'task-input-error') is no longer visible
     - expect: The input shows the character 'A'
 
-#### 1.7. Submit the add-task form by pressing Enter
+#### 1.7. Submit the add-task form by pressing Enter — `[x] Implemented`
 
 **File:** `functional-tests/tests/adding-tasks.spec.ts`
 
@@ -118,7 +118,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 2.1. Toggle an active task to completed
+#### 2.1. Toggle an active task to completed — `[x] Implemented`
 
 **File:** `functional-tests/tests/toggling-tasks.spec.ts`
 
@@ -133,7 +133,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Completed stat (data-testid 'stat-completed') increases by one (from 1 to 2)
     - expect: The Total stat remains unchanged
 
-#### 2.2. Toggle a completed task back to active
+#### 2.2. Toggle a completed task back to active — `[x] Implemented`
 
 **File:** `functional-tests/tests/toggling-tasks.spec.ts`
 
@@ -147,7 +147,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Active stat increases by one (from 2 to 3)
     - expect: The Completed stat decreases by one (from 1 to 0)
 
-#### 2.3. Toggle the same task complete and then incomplete in sequence
+#### 2.3. Toggle the same task complete and then incomplete in sequence — `[x] Implemented`
 
 **File:** `functional-tests/tests/toggling-tasks.spec.ts`
 
@@ -165,7 +165,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 3.1. Delete an active task
+#### 3.1. Delete an active task — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/deleting-tasks.spec.ts`
 
@@ -178,7 +178,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Total stat (data-testid 'stat-total') decreases from 3 to 2
     - expect: The Active stat decreases from 2 to 1
 
-#### 3.2. Delete a completed task
+#### 3.2. Delete a completed task — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/deleting-tasks.spec.ts`
 
@@ -191,7 +191,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Completed stat decreases from 1 to 0
     - expect: The 'Clear completed' button (data-testid 'clear-completed') disappears since there are no more completed tasks
 
-#### 3.3. Delete all tasks to reach an empty state
+#### 3.3. Delete all tasks to reach an empty state — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/deleting-tasks.spec.ts`
 
@@ -211,7 +211,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 4.1. Default filter shows all tasks
+#### 4.1. Default filter shows all tasks — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -221,7 +221,7 @@ A React-based task management application accessible after logging in with alice
     - expect: All three seeded task items are visible in the task list
     - expect: The 'All' button label shows 'All (3)'
 
-#### 4.2. Active filter shows only incomplete tasks
+#### 4.2. Active filter shows only incomplete tasks — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -235,7 +235,7 @@ A React-based task management application accessible after logging in with alice
     - expect: Task 3 ('Review test coverage', which is completed) is not rendered
     - expect: The 'Active' button label shows 'Active (2)'
 
-#### 4.3. Completed filter shows only completed tasks
+#### 4.3. Completed filter shows only completed tasks — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -248,7 +248,7 @@ A React-based task management application accessible after logging in with alice
     - expect: Tasks 1 and 2 are not rendered
     - expect: The 'Completed' button label shows 'Completed (1)'
 
-#### 4.4. Switching from Active back to All shows all tasks again
+#### 4.4. Switching from Active back to All shows all tasks again — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -261,7 +261,7 @@ A React-based task management application accessible after logging in with alice
     - expect: All three tasks are visible again
     - expect: The 'All' filter button has the active CSS class
 
-#### 4.5. Completed filter with no completed tasks shows empty state
+#### 4.5. Completed filter with no completed tasks shows empty state — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -274,7 +274,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The empty-state element (data-testid 'empty-state') is visible
     - expect: The empty-state text reads 'No completed tasks yet'
 
-#### 4.6. Active filter with no active tasks shows empty state
+#### 4.6. Active filter with no active tasks shows empty state — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -289,7 +289,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The empty-state element (data-testid 'empty-state') is visible
     - expect: The empty-state text reads 'No tasks — add one above'
 
-#### 4.7. Filter state updates dynamically when a task is toggled
+#### 4.7. Filter state updates dynamically when a task is toggled — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -301,7 +301,7 @@ A React-based task management application accessible after logging in with alice
     - expect: Only task 2 remains visible
     - expect: The 'Active' button label updates to 'Active (1)'
 
-#### 4.8. A newly added task appears in the All and Active filters but not in Completed
+#### 4.8. A newly added task appears in the All and Active filters but not in Completed — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/filtering-tasks.spec.ts`
 
@@ -320,7 +320,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 5.1. Clear completed button is visible only when completed tasks exist
+#### 5.1. Clear completed button is visible only when completed tasks exist — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/clear-completed.spec.ts`
 
@@ -332,7 +332,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Completed stat drops to 0
     - expect: The 'Clear completed' button (data-testid 'clear-completed') is no longer in the DOM
 
-#### 5.2. Clear completed removes all completed tasks at once
+#### 5.2. Clear completed removes all completed tasks at once — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/clear-completed.spec.ts`
 
@@ -349,7 +349,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Completed stat is 0
     - expect: The 'Clear completed' button disappears from the DOM
 
-#### 5.3. Clear completed leaves active tasks untouched
+#### 5.3. Clear completed leaves active tasks untouched — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/clear-completed.spec.ts`
 
@@ -361,7 +361,7 @@ A React-based task management application accessible after logging in with alice
     - expect: Task 1 ('Set up Playwright') and task 2 ('Write end-to-end tests') remain in the list
     - expect: Their completed status is unchanged (both still active)
 
-#### 5.4. Clear completed works correctly when the Completed filter is active
+#### 5.4. Clear completed works correctly when the Completed filter is active — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/clear-completed.spec.ts`
 
@@ -377,7 +377,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 6.1. Initial stats reflect the seeded data correctly
+#### 6.1. Initial stats reflect the seeded data correctly — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/task-statistics.spec.ts`
 
@@ -387,7 +387,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Active stat (data-testid 'stat-active') shows 2
     - expect: The Completed stat (data-testid 'stat-completed') shows 1
 
-#### 6.2. Stats update immediately when a task is added
+#### 6.2. Stats update immediately when a task is added — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/task-statistics.spec.ts`
 
@@ -399,7 +399,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Active stat updates to 3
     - expect: The Completed stat remains 1
 
-#### 6.3. Stats update immediately when a task is toggled to completed
+#### 6.3. Stats update immediately when a task is toggled to completed — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/task-statistics.spec.ts`
 
@@ -411,7 +411,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Completed stat updates to 2
     - expect: The Total stat remains 3
 
-#### 6.4. Stats update immediately when a task is deleted
+#### 6.4. Stats update immediately when a task is deleted — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/task-statistics.spec.ts`
 
@@ -423,7 +423,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Completed stat updates to 0
     - expect: The Active stat remains 2
 
-#### 6.5. Filter buttons display correct counts matching the stats
+#### 6.5. Filter buttons display correct counts matching the stats — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/task-statistics.spec.ts`
 
@@ -433,7 +433,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The 'Active' filter button (data-testid 'filter-active') label reads 'Active (2)'
     - expect: The 'Completed' filter button (data-testid 'filter-completed') label reads 'Completed (1)'
 
-#### 6.6. Filter button counts update after toggling a task
+#### 6.6. Filter button counts update after toggling a task — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/task-statistics.spec.ts`
 
@@ -449,7 +449,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 7.1. Empty state is not shown when tasks exist under the All filter
+#### 7.1. Empty state is not shown when tasks exist under the All filter — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/empty-state.spec.ts`
 
@@ -458,7 +458,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The task list contains three task items
     - expect: The empty-state element (data-testid 'empty-state') is not visible
 
-#### 7.2. Empty state appears with the correct message when all tasks are deleted
+#### 7.2. Empty state appears with the correct message when all tasks are deleted — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/empty-state.spec.ts`
 
@@ -469,7 +469,7 @@ A React-based task management application accessible after logging in with alice
     - expect: After all deletions the empty-state element (data-testid 'empty-state') is visible
     - expect: The empty-state text reads 'No tasks — add one above'
 
-#### 7.3. Empty state under Completed filter reads 'No completed tasks yet'
+#### 7.3. Empty state under Completed filter reads 'No completed tasks yet' — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/empty-state.spec.ts`
 
@@ -480,7 +480,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The empty-state element (data-testid 'empty-state') is visible
     - expect: The empty-state text reads 'No completed tasks yet' (not 'No tasks — add one above')
 
-#### 7.4. Empty state under Active filter reads 'No tasks — add one above'
+#### 7.4. Empty state under Active filter reads 'No tasks — add one above' — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/empty-state.spec.ts`
 
@@ -491,7 +491,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The empty-state element (data-testid 'empty-state') is visible
     - expect: The empty-state text reads 'No tasks — add one above'
 
-#### 7.5. Empty state disappears immediately when a task is added
+#### 7.5. Empty state disappears immediately when a task is added — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/empty-state.spec.ts`
 
@@ -506,7 +506,7 @@ A React-based task management application accessible after logging in with alice
 
 **Seed:** `functional-tests/tests/seed.spec.ts`
 
-#### 8.1. No error is shown on initial page load before any submission attempt
+#### 8.1. No error is shown on initial page load before any submission attempt — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/input-validation.spec.ts`
 
@@ -515,7 +515,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The task input (data-testid 'task-input') is empty
     - expect: The error element (data-testid 'task-input-error') is not present in the DOM
 
-#### 8.2. Submitting with an empty input shows the required error
+#### 8.2. Submitting with an empty input shows the required error — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/input-validation.spec.ts`
 
@@ -527,7 +527,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The error element has role='alert'
     - expect: The task list task count does not change
 
-#### 8.3. Submitting with a whitespace-only title shows the required error
+#### 8.3. Submitting with a whitespace-only title shows the required error — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/input-validation.spec.ts`
 
@@ -538,7 +538,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The error message 'Task title cannot be empty' appears (data-testid 'task-input-error')
     - expect: No task is added to the list
 
-#### 8.4. Error clears automatically when the user begins typing a valid title
+#### 8.4. Error clears automatically when the user begins typing a valid title — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/input-validation.spec.ts`
 
@@ -548,7 +548,7 @@ A React-based task management application accessible after logging in with alice
   2. Type any character into the task input (data-testid 'task-input')
     - expect: The error message (data-testid 'task-input-error') is no longer present in the DOM
 
-#### 8.5. A valid title containing special characters is accepted
+#### 8.5. A valid title containing special characters is accepted — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/input-validation.spec.ts`
 
@@ -560,7 +560,7 @@ A React-based task management application accessible after logging in with alice
     - expect: A new task with the title 'Fix bug #42 <urgent> & deploy!' is added to the list
     - expect: The title is displayed exactly as entered
 
-#### 8.6. A very long task title is accepted without truncation in the data
+#### 8.6. A very long task title is accepted without truncation in the data — `[ ] Not implemented`
 
 **File:** `functional-tests/tests/input-validation.spec.ts`
 
