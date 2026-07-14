@@ -20,16 +20,17 @@ npm run lint     # oxlint
 
 ### Functional tests (`functional-tests/`)
 ```bash
-npm test                                           # run all tests (auto-starts app dev server)
+npm test                                                # run all tests (auto-starts app dev server)
 npx playwright test tests/tasks/toggling-tasks.spec.ts  # run a single spec file
-npx playwright test --debug                        # run with Playwright inspector
-npm run lint                                       # eslint
-npm run format                                      # prettier --write
+npx playwright test --debug                             # run with Playwright inspector
+npm run lint                                            # eslint
+npm run format                                          # prettier --write
+npx tsc                                                 # TypeScript compiler on *.ts files
 ```
 
 Tests run against Chromium only. The config always starts `npm run dev` in `../app`; locally it reuses an existing server on port 5173 if one is already running, in CI it always starts a fresh one.
 
-Run `npm run lint` and `npm run format` in `functional-tests/` before committing changes there. These aren't yet wired into a GitHub workflow — see the branching & PR workflow section below.
+Run `npm run lint`, `npm run format` and `npx tsc` in `functional-tests/` before committing changes there. There are Github workflow steps that also run this but it would be good to catch these errors before then.
 
 ## Branching & PR workflow
 
