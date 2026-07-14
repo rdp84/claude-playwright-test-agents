@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { filterTasks, computeStats, validateTaskTitle } from './taskUtils'
 
 const PRIORITIES = ['high', 'medium', 'low']
 const FILTERS = ['all', 'active', 'completed']
@@ -18,22 +19,15 @@ export default function TasksPage({ user, onLogout }) {
     const [filter, setFilter] = useState('all')
     const [inputError, setInputError] = useState('')
 
-    const filtered = tasks.filter(t => {
-        if (filter === 'active') return !t.completed
-        if (filter === 'completed') return t.completed
-        return true
-    })
+    const filtered = filterTasks(tasks, filter)
 
-    const stats = {
-        total: tasks.length,
-        active: tasks.filter(t => !t.completed).length,
-        completed: tasks.filter(t => t.completed).length,
-    }
+    const stats = computeStats(tasks)
 
     function addTask(e) {
         e.preventDefault()
-        if (!newTitle.trim()) {
-            setInputError('Task title cannot be empty')
+        const validationError = validateTaskTitle(newTitle)
+        if (validationError) {
+            setInputError(validationError)
             return
         }
         setInputError('')
