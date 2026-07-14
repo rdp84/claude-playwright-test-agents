@@ -40,6 +40,21 @@ describe('TasksPage', () => {
         expect(statNumber('active')).toBe('3')
     })
 
+    it.each([
+        ['high', 'Fix critical bug'],
+        ['medium', 'Water the plants'],
+        ['low', 'Read a book'],
+    ])('adds a task with %s priority', async (priority, title) => {
+        const { userEvt } = setup()
+        await userEvt.type(screen.getByTestId('task-input'), title)
+        await userEvt.selectOptions(screen.getByTestId('priority-select'), priority)
+        await userEvt.click(screen.getByTestId('add-task-button'))
+
+        const item = taskContainer(title)
+        expect(within(item).getByText(priority)).toBeInTheDocument()
+        expect(item).toHaveAttribute('data-priority', priority)
+    })
+
     it('shows an inline error and adds nothing when the title is empty', async () => {
         const { userEvt } = setup()
         await userEvt.click(screen.getByTestId('add-task-button'))

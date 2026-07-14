@@ -28,7 +28,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The Total stat (data-testid 'stat-total') increments by one (from 3 to 4)
     - expect: The Active stat (data-testid 'stat-active') increments by one (from 2 to 3)
 
-#### 1.2. Add a task with high priority — `[ ] Skipped: covered by the single add-task test (1.1); a dedicated high-priority test wasn't felt necessary`
+#### 1.2. Add a task with high priority — `[ ] Skipped: covered by the "adds a task with %s priority" component test in app/src/TasksPage.test.jsx`
 
 **File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
@@ -44,7 +44,7 @@ A React-based task management application accessible after logging in with alice
     - expect: The task's priority badge (data-testid 'task-priority-{id}') shows 'high'
     - expect: The task item has data-priority attribute equal to 'high'
 
-#### 1.3. Add a task with low priority — `[ ] Skipped: covered by the single add-task test (1.1); a dedicated low-priority test wasn't felt necessary`
+#### 1.3. Add a task with low priority — `[ ] Skipped: covered by the "adds a task with %s priority" component test in app/src/TasksPage.test.jsx`
 
 **File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
