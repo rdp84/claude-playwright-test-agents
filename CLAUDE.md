@@ -23,9 +23,19 @@ npm run lint     # oxlint
 npm test                                           # run all tests (auto-starts app dev server)
 npx playwright test tests/tasks/toggling-tasks.spec.ts  # run a single spec file
 npx playwright test --debug                        # run with Playwright inspector
+npm run lint                                       # eslint
+npm run format                                      # prettier --write
 ```
 
 Tests run against Chromium only. The config always starts `npm run dev` in `../app`; locally it reuses an existing server on port 5173 if one is already running, in CI it always starts a fresh one.
+
+Run `npm run lint` and `npm run format` in `functional-tests/` before committing changes there. These aren't yet wired into a GitHub workflow — see the branching & PR workflow section below.
+
+## Branching & PR workflow
+
+- Create a new branch for any change; don't commit directly to `main`.
+- Raise a pull request with `gh pr create` once the branch is ready.
+- Keep commit history clean: rebase onto the latest `main` and use fixup/squash commits (e.g. `git commit --fixup`, `git rebase -i --autosquash`) rather than leaving a trail of "fix" commits.
 
 ## App architecture
 
