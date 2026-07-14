@@ -12,7 +12,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 1.1. Add a task with a valid title and default (medium) priority — `[x] Implemented`
 
-**File:** `functional-tests/tests/adding-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in with email 'alice@example.com' and password 'password123'
@@ -30,7 +30,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 1.2. Add a task with high priority — `[ ] Skipped: covered by the single add-task test (1.1); a dedicated high-priority test wasn't felt necessary`
 
-**File:** `functional-tests/tests/adding-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in with email 'alice@example.com' and password 'password123'
@@ -46,7 +46,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 1.3. Add a task with low priority — `[ ] Skipped: covered by the single add-task test (1.1); a dedicated low-priority test wasn't felt necessary`
 
-**File:** `functional-tests/tests/adding-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -62,7 +62,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 1.4. Attempt to add a task with an empty title — `[x] Implemented`
 
-**File:** `functional-tests/tests/adding-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -75,7 +75,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 1.5. Attempt to add a task with a whitespace-only title — `[x] Implemented`
 
-**File:** `functional-tests/tests/adding-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -89,7 +89,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 1.6. Error message clears when the user starts typing after a failed submission — `[x] Implemented`
 
-**File:** `functional-tests/tests/adding-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -102,7 +102,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 1.7. Submit the add-task form by pressing Enter — `[x] Implemented`
 
-**File:** `functional-tests/tests/adding-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/adding-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -120,7 +120,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 2.1. Toggle an active task to completed — `[x] Implemented`
 
-**File:** `functional-tests/tests/toggling-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/toggling-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -135,7 +135,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 2.2. Toggle a completed task back to active — `[x] Implemented`
 
-**File:** `functional-tests/tests/toggling-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/toggling-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -149,7 +149,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 2.3. Toggle the same task complete and then incomplete in sequence — `[x] Implemented`
 
-**File:** `functional-tests/tests/toggling-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/toggling-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -167,7 +167,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 3.1. Delete an active task — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/deleting-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/deleting-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -180,7 +180,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 3.2. Delete a completed task — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/deleting-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/deleting-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -193,7 +193,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 3.3. Delete all tasks to reach an empty state — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/deleting-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/deleting-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -213,7 +213,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.1. Default filter shows all tasks — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -223,7 +223,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.2. Active filter shows only incomplete tasks — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -237,7 +237,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.3. Completed filter shows only completed tasks — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -250,7 +250,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.4. Switching from Active back to All shows all tasks again — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -263,7 +263,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.5. Completed filter with no completed tasks shows empty state — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -276,7 +276,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.6. Active filter with no active tasks shows empty state — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -291,7 +291,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.7. Filter state updates dynamically when a task is toggled — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, then click the 'Active' filter button (data-testid 'filter-active')
@@ -303,7 +303,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 4.8. A newly added task appears in the All and Active filters but not in Completed — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/filtering-tasks.spec.ts`
+**File:** `functional-tests/tests/tasks/filtering-tasks.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -322,7 +322,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 5.1. Clear completed button is visible only when completed tasks exist — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/clear-completed.spec.ts`
+**File:** `functional-tests/tests/tasks/clear-completed.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -334,7 +334,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 5.2. Clear completed removes all completed tasks at once — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/clear-completed.spec.ts`
+**File:** `functional-tests/tests/tasks/clear-completed.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -351,7 +351,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 5.3. Clear completed leaves active tasks untouched — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/clear-completed.spec.ts`
+**File:** `functional-tests/tests/tasks/clear-completed.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -363,7 +363,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 5.4. Clear completed works correctly when the Completed filter is active — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/clear-completed.spec.ts`
+**File:** `functional-tests/tests/tasks/clear-completed.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, then click the 'Completed' filter button (data-testid 'filter-completed')
@@ -379,7 +379,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 6.1. Initial stats reflect the seeded data correctly — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/task-statistics.spec.ts`
+**File:** `functional-tests/tests/tasks/task-statistics.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -389,7 +389,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 6.2. Stats update immediately when a task is added — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/task-statistics.spec.ts`
+**File:** `functional-tests/tests/tasks/task-statistics.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -401,7 +401,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 6.3. Stats update immediately when a task is toggled to completed — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/task-statistics.spec.ts`
+**File:** `functional-tests/tests/tasks/task-statistics.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -413,7 +413,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 6.4. Stats update immediately when a task is deleted — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/task-statistics.spec.ts`
+**File:** `functional-tests/tests/tasks/task-statistics.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -425,7 +425,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 6.5. Filter buttons display correct counts matching the stats — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/task-statistics.spec.ts`
+**File:** `functional-tests/tests/tasks/task-statistics.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -435,7 +435,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 6.6. Filter button counts update after toggling a task — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/task-statistics.spec.ts`
+**File:** `functional-tests/tests/tasks/task-statistics.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -451,7 +451,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 7.1. Empty state is not shown when tasks exist under the All filter — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/empty-state.spec.ts`
+**File:** `functional-tests/tests/tasks/empty-state.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -460,7 +460,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 7.2. Empty state appears with the correct message when all tasks are deleted — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/empty-state.spec.ts`
+**File:** `functional-tests/tests/tasks/empty-state.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -471,7 +471,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 7.3. Empty state under Completed filter reads 'No completed tasks yet' — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/empty-state.spec.ts`
+**File:** `functional-tests/tests/tasks/empty-state.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, then delete task 3 to remove the only completed task
@@ -482,7 +482,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 7.4. Empty state under Active filter reads 'No tasks — add one above' — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/empty-state.spec.ts`
+**File:** `functional-tests/tests/tasks/empty-state.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, then complete both active tasks (task 1 and task 2) using their checkboxes
@@ -493,7 +493,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 7.5. Empty state disappears immediately when a task is added — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/empty-state.spec.ts`
+**File:** `functional-tests/tests/tasks/empty-state.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, then delete all three seeded tasks
@@ -508,7 +508,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 8.1. No error is shown on initial page load before any submission attempt — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/input-validation.spec.ts`
+**File:** `functional-tests/tests/tasks/input-validation.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -517,7 +517,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 8.2. Submitting with an empty input shows the required error — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/input-validation.spec.ts`
+**File:** `functional-tests/tests/tasks/input-validation.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, ensuring the task input is empty
@@ -529,7 +529,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 8.3. Submitting with a whitespace-only title shows the required error — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/input-validation.spec.ts`
+**File:** `functional-tests/tests/tasks/input-validation.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, then type '   ' (spaces) into the task input (data-testid 'task-input')
@@ -540,7 +540,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 8.4. Error clears automatically when the user begins typing a valid title — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/input-validation.spec.ts`
+**File:** `functional-tests/tests/tasks/input-validation.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in, trigger the error by clicking 'Add' with an empty input
@@ -550,7 +550,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 8.5. A valid title containing special characters is accepted — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/input-validation.spec.ts`
+**File:** `functional-tests/tests/tasks/input-validation.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
@@ -562,7 +562,7 @@ A React-based task management application accessible after logging in with alice
 
 #### 8.6. A very long task title is accepted without truncation in the data — `[ ] Not implemented`
 
-**File:** `functional-tests/tests/input-validation.spec.ts`
+**File:** `functional-tests/tests/tasks/input-validation.spec.ts`
 
 **Steps:**
   1. Navigate to '/' and log in
