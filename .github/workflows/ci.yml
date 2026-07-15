@@ -1,11 +1,12 @@
-name: Playwright Tests
+name: Tasklist Application CI
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 jobs:
-  test:
+  lint_test_app:
+    name: Lint and Test
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
@@ -13,6 +14,30 @@ jobs:
     - uses: actions/setup-node@v6
       with:
         node-version-file: .nvmrc
+        cache: npm
+        cache-dependency-path: ./app/package-lock.json
+    - name: Install app/ dependencies
+      run: npm ci
+      working-directory: ./app
+    - parallel:
+      - name: Lint app/
+        run: npm run lint
+        working-directory: ./app
+      - name: Test app/
+        run: npm test
+        working-directory: ./app
+  run_playwright_tests:
+    name: Run Playwright Tests
+    needs: lint_test_app
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - uses: actions/setup-node@v6
+      with:
+        node-version-file: .nvmrc
+        cache: npm
+        cache-dependency-path: ./app/package-lock.json
     - name: Install functional-tests/ dependencies
       run: npm ci
       working-directory: ./functional-tests
@@ -33,13 +58,6 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
         working-directory: ./functional-tests
-    - parallel:
-      - name: Lint app/
-        run: npm run lint
-        working-directory: ./app
-      - name: Test app/
-        run: npm test
-        working-directory: ./app
     - name: Run Playwright tests
       run: npm test
       working-directory: ./functional-tests
